@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.button {
+			background-color: #4CAF50;
+  			border: none;
+  			color: white;
+  			padding: 16px 32px;
+  			text-align: center;
+  			text-decoration: none;
+  			display: inline-block;
+  			font-size: 16px;
+  			margin: 4px 2px;
+  			transition-duration: 0.4s;
+  			cursor: pointer;
+		}
+		.buttonDOWNLOAD {
+			background-color: white; 
+  			color: black; 
+  			border: 2px solid #4CAF50;
+		}
+		.buttonDOWNLOAD:hover {
+			background-color: #4CAF50;
+  			color: white;
+		}
+		ul2 {
+			list-style-type: none;
+			background-color: #f3f3f3;
+		}
+		li2 {
+			float: left;
+		}
+		li2 a {
+			display: block;
+			color: black;
+			background-color: white;
+			text-align: center;
+			padding: 10px;
+			text-decoration: none;
+		}
+		li2 a:hover:not(.active) {
+			background-color: #ddd;
+		}
+		li2 a.active {
+			color: white;
+			background-color: #04AA6D;
+		}
+		body {
+			margin: 25px;
+		}
+		div {
+			text-align:center;
+			padding: 10px;
+		}
+		h1 {
+			text-align: center;
+			border-style: solid;
+			padding: 20px;
+		}
+		h2 {
+			padding: 10px;
+			text-align:center;
+		}
+	</style>
+<head>
+  
+<body>
+	<h1>Past Projects</h1>
+	<div>
+	<ul2>
+		<li2><a href="https://cschultz11.github.io/">Home</a></li2>
+		<li2><a href="https://cschultz11.github.io/about-me/">About Me</a></li2>
+		<li2><a href="https://cschultz11.github.io/past-projects/">Past Projects</a></li2>
+	</ul2>
+	</div>
+		<h2>Swift Weather App</h2>
+		<p>
+		This project was a simple weather app, designed to include some specific cities, along with an image representation of the weather at that time. This application was meant
+		as an introduction to both Swift, which I had never used before, as well as an introduction into accessing databases, in this case the US National Weather Service from whom
+		the data is from. Using XML Code to parse this data, I offered the client an ability to input city codes, but was instead turned down in favor of a more simplistic design of
+		specific cities. As such, I added a handful of more cities onto the app beyond those the client specified which resulted in positive reviews and assurance from the client.
+		</p>
+		<p>
+		The files consist of 2 Swift files, the respective views of the program, as well as the collection of images needed to run the program appropriately. There is a download for
+		all of the files in a ZIP folder, including the images, to be run immediately if necessary.
+		</p>
+		<div>
+		<a href="https://github.com/cschultz11/cschultz11.github.io/raw/main/past-projects/weather-app/Weather%20App%20-%20All%20Files.zip" class="button buttonDOWNLOAD">
+		Weather App - All Files</a>
+		<a href="https://github.com/cschultz11/cschultz11.github.io/blob/main/past-projects/weather-app/ContentView.swift" class="button buttonDOWNLOAD">
+		ContentView.swift</a>
+		<a href="https://github.com/cschultz11/cschultz11.github.io/blob/main/past-projects/weather-app/WeatherCityView.swift" class="button buttonDOWNLOAD">
+		WeatherCityView.swift</a>
+		<a href="https://github.com/cschultz11/cschultz11.github.io/raw/main/past-projects/weather-app/City%20and%20Weather%20Images.zip" class="button buttonDOWNLOAD">
+		City and Weather Images</a>
+		</div>
+</body>  
+</html>

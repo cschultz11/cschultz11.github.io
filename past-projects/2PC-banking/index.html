@@ -52,6 +52,8 @@
 		div {
 			text-align:center;
 			padding: 10px;
+			margin-top:-25px;
+			margin-bottom:35px;
 		}
 		h1 {
 			text-align: center;
@@ -59,6 +61,14 @@
 			padding: 20px;
 		}
 		h2 {
+			padding: 10px;
+			text-align:center;
+		}
+		.sectBorder {
+			border-style: double;
+		}
+		h3 {
+			margin-bottom:-10px;
 			padding: 10px;
 			text-align:center;
 		}
@@ -74,7 +84,7 @@
 		<li2><a href="https://cschultz11.github.io/past-projects/">Past Projects</a></li2>
 	</ul2>
 	</div>
-		<h2>2PC Banking Simulation</h2>
+		<h2 class="sectBorder">2PC Banking Simulation</h2>
 		<p>This project was a simple 2PC banking simulation, acting as a distributed server. The goal of this project
 		was to simulate 2 clients interacting with a coordinator who would keep track of different values of the clients' accounts
 		and, based on the input, would perform 1 of 2 functions. The first function would relocate $100 from Account A to Account B,

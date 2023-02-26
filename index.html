@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, html {
+  font-family: "Helvetica", sans-serif;
+  margin:0;
+  height:100%;
+  background: rgb(131,58,180);
+  background: linear-gradient(0deg, rgba(131,58,180,1) 0%, rgba(203,121,244,1) 25%, rgba(69,210,252,1) 75%);
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 40px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 24px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.logo {
+	display: block;
+	margin-left: auto;
+	margin-right:auto;
+	max-width:none;
+}
+
+#socials {
+	transition: margin-left .5s;
+	padding: 16px;
+	text-align:center;
+	width:100%;
+	position:fixed;
+	bottom:0;
+}
+
+.fa {
+  padding: 15px;
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 25%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-github {
+	background: white;
+	color: black;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="https://cschultz11.github.io/">Home</a>
+  <a href="https://cschultz11.github.io/about-me/">About</a>
+  <a href="https://cschultz11.github.io/past-projects/">Projects</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>
+  <h1 align="center">Christopher Schultz</h1>
+  <h2 style="color: white;" align="center">Software Engineer<h2>
+	<img class="logo" src="C:\Users\chris\Desktop\Random Docs\Website Redux\images\languages.jpg">
+</div>
+<div id="socials">
+		<a href="https://github.com/cschultz11" class="fa fa-github"></a>
+		<a href="https://www.linkedin.com/in/christopherjschultz/" class="fa fa-linkedin"></a>
+		<a href="https://twitter.com/chrisschultz407" class="fa fa-twitter"></a>
+		<a href="https://www.instagram.com/chris_schultz407/" class="fa fa-instagram"></a>
+</div>
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("socials").style.marginLeft = "125px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("socials").style.marginLeft= "0";
+}
+</script>
+   
+</body>
+</html> 
+
+<!--
+	<h1>My Portfolio</h1>
+	<div class="demark">
+	<ul2>
+		<li2><a href="https://cschultz11.github.io/">Home</a></li2>
+		<li2><a href="https://cschultz11.github.io/about-me/">About Me</a></li2>
+		<li2><a href="https://cschultz11.github.io/past-projects/">Past Projects</a></li2>
+	</ul2>
+	</div>
+	<h2 class="sectBorder">What is this website?</h2>
+	<p>This is my website, hosted on GitHub, that is used as a pseudo-portfolio for some of my past works, as well as
+	demonstrates a rough outline of who I am, what I am interested in, and certain skills that I have. More will be added
+	to this site as time progresses and I have more free time to upload new files (and design new pages). In the meantime,
+	there is the <a href="https://cschultz11.github.io/about-me/">About Me</a> section, which briefly details my education,
+	experience, and what positions I am interest in for employment. On this page there is also some information in order to
+	contact me, such as my email, as well as my LinkedIn and GitHub pages.</p>
+	<p>There is also a <a href="https://cschultz11.github.io/past-projects/">Past Projects</a> section that includes a handful
+	of previous assignments and projects, as well as some files, presentations, and code from said projects. Most of these projects
+	were coded in different languages, from C++ to Python to Swift, in order to highlight the various languages I have experience with.
+	More projects will be added, including demos of Unity projects and code in other languages, but meanwhile the About Me page offers
+	a more in-depth explanation regarding the years of experience that I have with each language.</p>
+-->

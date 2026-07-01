@@ -1,230 +1,219 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body, html {
-  font-family: "Helvetica", sans-serif;
-  margin:0;
-  height:100%;
-  background: linear-gradient(0deg, rgba(131,58,180,1) 0%, rgba(203,121,244,1) 25%, rgba(69,210,252,1) 75%);
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 40px;
-}
-
-.sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 24px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidebar a:hover {
-  color: #f1f1f1;
-}
-
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-}
-
-.openbtn:hover {
-  background-color: #444;
-}
-
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-}
-
-@media screen and (min-width: 961px) {
-	h1 {
-		font-size: 36px;
-	}
-	h2 {
-		font-size: 30px;
-	}
-	h3 {
-		font-size: 24px;
-	}
-	p 	{
-		font-size: 20px;
-	}
-	li {
-		font-size: 20px;
-	}
-}
-
-.logo {
-	display: block;
-	margin-left: auto;
-	margin-right:auto;
-	max-width:none;
-}
-
-.accordionTitle {
-  cursor: pointer;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-align:center;
-}
-
-.accordionTitle + .accordionContent {
-  display: none;
-}
-
-.accordionTitle.is-open + .accordionContent {
-  display: block;
-}
-
-#socials {
-	transition: margin-left .5s;
-	padding: 16px;
-	text-align:center;
-	width:100%;
-	position:fixed;
-	bottom:0;
-}
-
-.fa {
-  padding: 15px;
-  font-size: 20px;
-  width: 20px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 25%;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-github {
-	background: white;
-	color: black;
-}
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-.button {
-	background-color: #4CAF50;
-	border: none;
-	color: white;
-	padding: 16px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	transition-duration: 0.4s;
-	cursor: pointer;
-}
-.buttonDOWNLOAD {
-	background-color: white; 
-  	color: black; 
-  	border: 2px solid #4CAF50;
-}
-.buttonDOWNLOAD:hover {
-	background-color: #4CAF50;
-	color: white;
-}
-
-#downloads {
-	text-align:center;
-}
-
-</style>
+<title>Christopher Schultz — Full-Stack Software Engineer</title>
+<meta name="description" content="Christopher Schultz — Full-Stack Software Engineer. Web, systems, and product development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
-	
-<title>
-	Home | Christopher Schultz
-</title>
 <body>
 
-<div id="mySidebar" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <a href="https://cschultz11.github.io/">Home</a>
-  <a href="https://cschultz11.github.io/about/">About</a>
-  <a href="https://cschultz11.github.io/past-projects/">Past Projects</a>
-</div>
+<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sideNav">
+  <i class="fa-solid fa-bars"></i>
+  <i class="fa-solid fa-xmark"></i>
+</button>
 
-<div id="main">
-  <button class="openbtn" onclick="openNav()">☰</button>
-  <h1 align="center">Christopher Schultz</h1>
-  <h2 style="color: white;" align="center">Software Engineer</h2>
-	<img class="logo" src="\images\languages.jpg">
-</div>
-<div id="socials">
-		<a href="https://github.com/cschultz11" class="fa fa-github"></a>
-		<a href="https://www.linkedin.com/in/christopherjschultz/" class="fa fa-linkedin"></a>
-		<a href="https://twitter.com/chrisschultz407" class="fa fa-twitter"></a>
-		<a href="https://www.instagram.com/chris_schultz407/" class="fa fa-instagram"></a>
-</div>
+<div class="backdrop" id="backdrop"></div>
 
+<nav class="side-nav" id="sideNav">
+  <div class="brand">
+    <strong>Christopher Schultz</strong>
+    <span>Full-Stack Software Engineer</span>
+  </div>
+  <ul>
+    <li><a href="#home" data-nav><i class="fa-solid fa-house"></i>Home</a></li>
+    <li><a href="#about" data-nav><i class="fa-solid fa-user"></i>About</a></li>
+    <li><a href="#skills" data-nav><i class="fa-solid fa-layer-group"></i>Skills</a></li>
+    <li><a href="#projects" data-nav><i class="fa-solid fa-diagram-project"></i>Projects</a></li>
+    <li><a href="#contact" data-nav><i class="fa-solid fa-envelope"></i>Contact</a></li>
+  </ul>
+  <div class="nav-footer">
+    <a href="https://github.com/cschultz11" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/christopherjschultz/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://twitter.com/chrisschultz407" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="mailto:chrisschultz407@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+  </div>
+</nav>
 
-<script>
-function openNav() {
-  document.getElementById("mySidebar").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-  document.getElementById("socials").style.marginLeft = "125px";
-}
+<main>
 
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-  document.getElementById("socials").style.marginLeft= "0";
-}
-</script>
-   
+  <section id="home" class="hero">
+    <p class="eyebrow">Welcome</p>
+    <h1>Christopher Schultz</h1>
+    <p class="role">Full-Stack Software Engineer</p>
+    <p>I build and maintain reliable software across the stack — from front-end interfaces to back-end
+       systems and content platforms. Currently at Fordham University, with a background spanning
+       web development, systems engineering, and game development.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://github.com/cschultz11/cschultz11.github.io/raw/main/about/Christopher%20Schultz%20Resume.pdf" target="_blank" rel="noopener">
+        <i class="fa-solid fa-file-arrow-down"></i> View Résumé
+      </a>
+      <a class="btn btn-ghost" href="#contact"><i class="fa-solid fa-paper-plane"></i> Get in Touch</a>
+      <a class="btn btn-ghost" href="#projects"><i class="fa-solid fa-diagram-project"></i> See Projects</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>Christopher is a full-stack developer at Fordham University, where his work spans front-end
+       and back-end development as well as web content platform engineering — including building
+       and troubleshooting structured content types in TerminalFour (T4) Site Manager.</p>
+    <p>He graduated from Fordham College at Lincoln Center in May 2022 with a B.A., double-majoring in
+       Computer Science and Economics with double minors in French and History, then completed a
+       Master of Science in Computer Science at Fordham in May 2023. His capstone project was a
+       semi-linear scavenger game built in Python with the PyGame library, using original assets.</p>
+    <p>He's interested in full-time software engineering roles across sectors including video games,
+       information technology, and financial markets.</p>
+    <div class="facts">
+      <div class="fact"><div class="label">Education</div><div class="value">M.S. Computer Science, Fordham University (2023)</div></div>
+      <div class="fact"><div class="label">Undergrad</div><div class="value">B.A. Computer Science & Economics, Fordham College at Lincoln Center (2022)</div></div>
+      <div class="fact"><div class="label">Languages Spoken</div><div class="value">English, French</div></div>
+      <div class="fact"><div class="label">Based In</div><div class="value">New York, NY</div></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skill-group c-1">
+      <h3>Web & Front-End</h3>
+      <div class="chip-row">
+        <span class="chip"><i class="fa-brands fa-html5"></i>HTML <span class="yrs">8 yrs</span></span>
+        <span class="chip"><i class="fa-brands fa-css3-alt"></i>CSS <span class="yrs">8 yrs</span></span>
+        <span class="chip"><i class="fa-brands fa-js"></i>JavaScript <span class="yrs">7 yrs</span></span>
+      </div>
+    </div>
+
+    <div class="skill-group c-2">
+      <h3>Systems & Application Languages</h3>
+      <div class="chip-row">
+        <span class="chip"><i class="fa-solid fa-code"></i>C++ <span class="yrs">6 yrs</span></span>
+        <span class="chip"><i class="fa-solid fa-code"></i>C# <span class="yrs">4 yrs</span></span>
+        <span class="chip"><i class="fa-brands fa-java"></i>Java <span class="yrs">4 yrs</span></span>
+        <span class="chip"><i class="fa-brands fa-python"></i>Python <span class="yrs">2 yrs</span></span>
+        <span class="chip"><i class="fa-brands fa-swift"></i>Swift <span class="yrs">1 yr</span></span>
+      </div>
+    </div>
+
+    <div class="skill-group c-3">
+      <h3>Engines & Platforms</h3>
+      <div class="chip-row">
+        <span class="chip"><i class="fa-brands fa-unity"></i>Unity <span class="yrs">3 yrs</span></span>
+        <span class="chip"><i class="fa-solid fa-cube"></i>Unreal Engine <span class="yrs">1 yr</span></span>
+        <span class="chip"><i class="fa-solid fa-window-restore"></i>TerminalFour (T4) Site Manager</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="proj-lang c-1">
+      <div class="lang-head"><i class="fa-solid fa-code"></i><span>C++</span></div>
+      <div class="proj-grid">
+        <div class="proj-card">
+          <h4>Sudoku Game</h4>
+          <p>Team project for a software engineering course focused on integration and unit testing.
+             Designed the core algorithms and function calls powering the game engine.</p>
+          <a href="https://github.com/adonofrio23/Software-Engineering-Sudoku" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Repository</a>
+        </div>
+        <div class="proj-card">
+          <h4>Investment Calculator</h4>
+          <p>Calculates detailed investment returns, including inflation- and time-adjusted values.
+             Demonstrates object-oriented design alongside applied financial concepts.</p>
+          <a href="https://github.com/cschultz11/InvestmentCalculator/" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Repository</a>
+        </div>
+        <div class="proj-card">
+          <h4>Road Simulator</h4>
+          <p>Basic road simulation built to explore JSON import/export in C++, with emphasis on
+             polymorphism and inheritance.</p>
+          <a href="https://github.com/cschultz11/road-simulator" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Repository</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-lang c-2">
+      <div class="lang-head"><i class="fa-brands fa-python"></i><span>Python</span></div>
+      <div class="proj-grid">
+        <div class="proj-card">
+          <h4>Two-Phase Commit Banking Simulation</h4>
+          <p>A simple two-phase commit banking system over a distributed server, simulating two
+             clients performing transfers and bonus operations, logged to a bank file.</p>
+          <a href="https://github.com/cschultz11/Simple-2PC" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Repository</a>
+        </div>
+        <div class="proj-card">
+          <h4>Capstone PyGame Project</h4>
+          <p>2D pixel game built with PyGame, featuring original sprites modeled on Fordham's Rose
+             Hill campus, developed with a partner as a capstone deliverable.</p>
+          <a href="https://github.com/AlexisWein/Capstone-Project" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Repository</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-lang c-3">
+      <div class="lang-head"><i class="fa-brands fa-java"></i><span>Java</span></div>
+      <div class="proj-grid">
+        <div class="proj-card">
+          <h4>Patient Zero Finder</h4>
+          <p>Determines a likely "patient zero" from room dimensions, occupant locations, and
+             transmission rate — applied object-oriented design for a real-world scenario.</p>
+          <a href="https://github.com/cschultz11/PatientZeroFinder" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Repository</a>
+        </div>
+        <div class="proj-card">
+          <h4>Airplane Boarding Methods</h4>
+          <p>Analyzed commercial boarding methods in Java and built a companion Unity VR simulation,
+             modeling variable passenger speeds and aircraft types.</p>
+          <a href="https://drive.google.com/drive/folders/1aSpMXPJNy6ypOxad23_6JShjhKEfQ1mN?usp=sharing" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Report & Files</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-lang c-1">
+      <div class="lang-head"><i class="fa-brands fa-swift"></i><span>Swift</span></div>
+      <div class="proj-grid">
+        <div class="proj-card">
+          <h4>Simple Weather App</h4>
+          <p>Displays current weather by city, parsing XML data from the US National Weather Service
+             to drive a simplified, icon-based interface.</p>
+          <a href="https://github.com/cschultz11/weather-app" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Repository</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Open to full-time software engineering opportunities. Reach out directly or find me on any of
+       the platforms below.</p>
+    <div class="contact-row">
+      <a class="contact-card" href="mailto:chrisschultz407@gmail.com">
+        <i class="fa-solid fa-envelope"></i>
+        <div><div class="label">Email</div><div class="value">chrisschultz407@gmail.com</div></div>
+      </a>
+      <a class="contact-card" href="https://github.com/cschultz11" target="_blank" rel="noopener">
+        <i class="fa-brands fa-github"></i>
+        <div><div class="label">GitHub</div><div class="value">cschultz11</div></div>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/christopherjschultz/" target="_blank" rel="noopener">
+        <i class="fa-brands fa-linkedin"></i>
+        <div><div class="label">LinkedIn</div><div class="value">christopherjschultz</div></div>
+      </a>
+      <a class="contact-card" href="https://twitter.com/chrisschultz407" target="_blank" rel="noopener">
+        <i class="fa-brands fa-x-twitter"></i>
+        <div><div class="label">Twitter</div><div class="value">@chrisschultz407</div></div>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>&copy; <span id="year"></span> Christopher Schultz</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
